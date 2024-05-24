@@ -88,9 +88,3 @@ if numT <=0 and numT >=40:
     print("20  disocunt")    
 if numT >60 and numT >=70:
     print("30% discount")    
-
-
-
-
-
-    

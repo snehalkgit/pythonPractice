@@ -93,3 +93,14 @@ for x in range(12,2,-2):
    if a ==10:
       break
    print(x)
+
+for x in range(20):
+   if b == 10:
+      continue
+   print(x)
+   
+
+for x in range(10,16):
+   if a == 5:
+      break
+   print(x)
