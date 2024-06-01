@@ -1,145 +1,66 @@
-##dictionary and   methods in dict
+##program 1
+
+vehicle={
+    "color":"white",
+    "model":"altrozxz",
+    "reg":151545
+    }
 
 
-info={
-    "name" : "snehal",
-    "age":24,
-    "area":"hinganghat",
-    "skills":['js','sql','python',['typescript','cypress','c++']]
-
-}
-
-# get() to access the values
+print(vehicle)
+print(vehicle["reg"])
 
 
-print(info.get('name'))
-print(info.get("age"))
-print(info.get('area'))
+##key value
 
-print(info.get('skills')[2])
-print(info.get('skills')[3][2])
+for x in vehicle:
+    print(vehicle[x])
 
 
-###
-# keys() will get all the keys from the dictionary
-# values()
-# items()
+for x in vehicle.keys():
+    print(x)
+
+for x in vehicle.values():
+    print(x)
 
 
-print(info.keys())
-print(type(info))
-print(info.values())
-print(info.items())
+for x in vehicle.items():
+    print(x)   
 
 
-for s in info.values():
-    print(s)
- ## values 
+for key,value in vehicle.items():
+    print(key,value)
 
 
-
-for s in info.keys():
-    print(s) ## keys
-
-
+vehicle.pop('reg')
+print(vehicle)
+##removing elements
 
 
-for s in info.items():
-    print(s)     ## items  gives keys and their values
+# vehicle["city"] = "mumbai"
+# print(vehicle)
+
+
+vehicle['expiry']=['2030']
+print(vehicle)
 
 
 
-#  dictionary : indexing ? are dictionary ordered : YES
-# Dictionary is a mutable data type
-# Dictionary is ordered 
+rowone={"1":"one","2":"two","3":"three"}
+rowtwo={"4":"four","5":'five'}
 
+rowone.update(rowtwo)
+print(rowtwo)
+print(rowone)
 
-##-----------------------------------------------------------
-
-info2={
-
-
-    'samir':45,
-    'snehal':88,
-    'kajal':90,
-    'mani':60
-}
-
-# updating a dictionary
-# update({key:value})
-
-
-info2.update({'snehal':99})
-print(info2)
-
-
-info2.update({'mani':75})
-print(info2)
+  ## will set new value if not present 
+vehicle.setdefault("city","goa")
+print(vehicle)
+vehicle.setdefault("city")
+print(vehicle)
 
 
 
-# setdefault()
-# setdefault() = get() + update()
 
-# working as get()
-
-print(info2.get("snehal"))
-#print(info2.setdefault("nikita"))
-print(info2.setdefault("nikita",99))
-print(info2)
-
-# if the key does not exist , key will be addded by the setdefault method with value as 'None'
-
-# using get() we can inform the user about key 
-
-##--------------------------------------------------------------------------------------
-##removing items
-
-
-info3={
-    "name" : "snehal",
-    "age":24,
-    "area":"hinganghat",
-    "skills":['js','sql','python',['typescript','cypress','c++']],
-    "hobby":({"dancing","redaing"})
-
-}
-print(info3)
-
-print(info3.pop('age'))
-
-
-# will remove the last added item
-# popitem()
-
-print(info3.popitem())
-print(info3)
-
-
-
-# Initialising a dictionary
-# fromkeys('keys',value)
-
-
-students_list=["snehal","nikita","saru","chinmay"]
-print(students_list)
-
-
-print(dict.fromkeys(students_list))
-print(dict.fromkeys(students_list,85))
-print(dict.fromkeys(students_list,88))
-print(dict.fromkeys(students_list),55)
-print(students_list)
-
-
-list_val = [18,200,300]
-
-print(dict.fromkeys(list_val,"NA"))
-
-
-
-list_fruits = ['apple','banana' , 'kiwi']
-
-print(dict.fromkeys(list_fruits,"In Stock"))
-print(dict.fromkeys(list_fruits,"not in stock"))
-print(dict.fromkeys(list_fruits,"avaliable"))
+a1 = vehicle.fromkeys(["six","seven"])
+print(a1)

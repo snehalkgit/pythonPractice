@@ -1,137 +1,145 @@
-##methods
-name=["snehal","kamble",24,8]
-print(name)
-print(name[1])
-## retrive
-
-print(name[0])
-
-##update
-
-name[0]="nikita"
-print(name)
+##dictionary and   methods in dict
 
 
-##add
-
-#name.append('city')
-print(name)
-
-##delete
-
-name.pop()
-name.remove("nikita")
-print(name)
-
-##if available
-
-print("kamble" in name)
-
-
-
-
-##dictionary----------
-# dictionary does not stores the value by index and write in double cotted 
-
-##dict
-
-name2={
-    "firstname":"snehal",
-    "lastname":"kamble",
+info={
+    "name" : "snehal",
     "age":24,
-    "seatno":22
+    "area":"hinganghat",
+    "skills":['js','sql','python',['typescript','cypress','c++']]
 
 }
 
-##retive
-
-q1 = (name2['firstname'])
-print(q1)
-
-q2 = name2['lastname']
-print(q2)
-
-##update
-
-q3 = name2['age']=25
-print(q3)
+# get() to access the values
 
 
-name2["seatno"]=55
-print(name2)
+print(info.get('name'))
+print(info.get("age"))
+print(info.get('area'))
+
+print(info.get('skills')[2])
+print(info.get('skills')[3][2])
 
 
-##add
-
-name2['city']="mumbai" ##if not present so it will add new 
-print(name2)
-
-
-name2['color'] = "black"
-print(name2)  ##if present soo it will update 
+###
+# keys() will get all the keys from the dictionary
+# values()
+# items()
 
 
-##delete 
+print(info.keys())
+print(type(info))
+print(info.values())
+print(info.items())
 
-name2.pop('age')
 
-
-# del name2
-# print(name2)
+for s in info.values():
+    print(s)
+ ## values 
 
 
 
-##program2 
+for s in info.keys():
+    print(s) ## keys
 
-bank={
-    "branchname":"maharashatra bank",
-    "holdername":"snehal kamble",
-    "regno":12545655555
+
+
+
+for s in info.items():
+    print(s)     ## items  gives keys and their values
+
+
+
+#  dictionary : indexing ? are dictionary ordered : YES
+# Dictionary is a mutable data type
+# Dictionary is ordered 
+
+
+##-----------------------------------------------------------
+
+info2={
+
+
+    'samir':45,
+    'snehal':88,
+    'kajal':90,
+    'mani':60
+}
+
+# updating a dictionary
+# update({key:value})
+
+
+info2.update({'snehal':99})
+print(info2)
+
+
+info2.update({'mani':75})
+print(info2)
+
+
+
+# setdefault()
+# setdefault() = get() + update()
+
+# working as get()
+
+print(info2.get("snehal"))
+#print(info2.setdefault("nikita"))
+print(info2.setdefault("nikita",99))
+print(info2)
+
+# if the key does not exist , key will be addded by the setdefault method with value as 'None'
+
+# using get() we can inform the user about key 
+
+##--------------------------------------------------------------------------------------
+##removing items
+
+
+info3={
+    "name" : "snehal",
+    "age":24,
+    "area":"hinganghat",
+    "skills":['js','sql','python',['typescript','cypress','c++']],
+    "hobby":({"dancing","redaing"})
 
 }
-##retrive 
+print(info3)
 
-print(bank)
-print(bank["branchname"])
-print(bank["regno"])
+print(info3.pop('age'))
 
 
-##update
+# will remove the last added item
+# popitem()
 
-bank["branchname"]="sbi"
-print(bank)
-
-
-bank["city"]="hinganghat"
-print(bank)
+print(info3.popitem())
+print(info3)
 
 
 
-##add
-
-bank['age'] = 24
-print(bank)
+# Initialising a dictionary
+# fromkeys('keys',value)
 
 
-#delete 
-
-bank.pop('age')
-print(bank)
+students_list=["snehal","nikita","saru","chinmay"]
+print(students_list)
 
 
-a=len(bank)
-print(a)
+print(dict.fromkeys(students_list))
+print(dict.fromkeys(students_list,85))
+print(dict.fromkeys(students_list,88))
+print(dict.fromkeys(students_list),55)
+print(students_list)
 
 
-print("city"in bank)
-print("snehal kamble" in bank) ## reteun false value 
-print('maharashatra bank' in bank) ## false
+list_val = [18,200,300]
 
-
-
-## *** Keys are the Primary Index **** 
+print(dict.fromkeys(list_val,"NA"))
 
 
 
+list_fruits = ['apple','banana' , 'kiwi']
 
-
+print(dict.fromkeys(list_fruits,"In Stock"))
+print(dict.fromkeys(list_fruits,"not in stock"))
+print(dict.fromkeys(list_fruits,"avaliable"))

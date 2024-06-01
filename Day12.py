@@ -1,52 +1,136 @@
+##methods
+name=["snehal","kamble",24,8]
+print(name)
+print(name[1])
+## retrive
 
-##program 1
-birthyear=[1998,1997,1996,1980,1989]
+print(name[0])
 
-currentage = []
-for x in birthyear:
- print(x)
- print(2024-x)
- age = 2024 - x
- currentage.append(age)
- print(currentage)
+##update
 
-
- ##program 2
- marks=[21,60,69,55,88,55,88]
- above50=[]
- for x in marks:
-  print(x)
-
-for x in marks:
- if x >=50 and x %2==0:
-  above50.append(x)
-  print(above50)
-  
+name[0]="nikita"
+print(name)
 
 
-##program 3
+##add
 
-marks2=[25,11,65]
-total = 0
-for x in marks2:
- print(x)
+#name.append('city')
+print(name)
 
-for x in  marks2:
- total = total +x
- print(total) 
+##delete
+
+name.pop()
+name.remove("nikita")
+print(name)
+
+##if available
+
+print("kamble" in name)
 
 
 
- ##progeam 3
 
- names=["snehal","chinmay","sayli","mani"]
+##dictionary----------
+# dictionary does not stores the value by index and write in double cotted 
 
-# print(names)
-# for nam in names:
-#  print(nam)
+##dict
 
-for i in names:
-  print("hello-welcome-"+ i)
+name2={
+    "firstname":"snehal",
+    "lastname":"kamble",
+    "age":24,
+    "seatno":22
+
+}
+
+##retive
+
+q1 = (name2['firstname'])
+print(q1)
+
+q2 = name2['lastname']
+print(q2)
+
+##update
+
+q3 = name2['age']=25
+print(q3)
+
+
+name2["seatno"]=55
+print(name2)
+
+
+##add
+
+name2['city']="mumbai" ##if not present so it will add new 
+print(name2)
+
+
+name2['color'] = "black"
+print(name2)  ##if present soo it will update 
+
+
+##delete 
+
+name2.pop('age')
+
+
+# del name2
+# print(name2)
+
+
+
+##program2 
+
+bank={
+    "branchname":"maharashatra bank",
+    "holdername":"snehal kamble",
+    "regno":12545655555
+
+}
+##retrive 
+
+print(bank)
+print(bank["branchname"])
+print(bank["regno"])
+
+
+##update
+
+bank["branchname"]="sbi"
+print(bank)
+
+
+bank["city"]="hinganghat"
+print(bank)
+
+
+
+##add
+
+bank['age'] = 24
+print(bank)
+
+
+#delete 
+
+bank.pop('age')
+print(bank)
+
+
+a=len(bank)
+print(a)
+
+
+print("city"in bank)
+print("snehal kamble" in bank) ## reteun false value 
+print('maharashatra bank' in bank) ## false
+
+
+
+## *** Keys are the Primary Index **** 
+
 
 
 
