@@ -21,7 +21,7 @@ a ="snehal" ## string
 b=('snehal',"samiksha") ##tuple
 c ={"name":"snehal"} ##dict 
 d =[1,5,42,3] ##list
-e={"sneha","mani"} ##set 
+e={"sneha","mani"} ##set  {1,2,4,7,6,} -- set 
 
 print(type(a))
 print(type(b))
@@ -64,11 +64,67 @@ setA.pop()
 print(setA)
 print(setB)
 
+##union method
+
+set1={14,55,78,96,33,79}
+set2={47,55,33,78,22,2,88}
+set3= set1.union(set2)
+print(set3) ##{96, 33, 2, 14, 78, 47, 22, 55, 88}
+
+
+set4=set1.intersection(set2)
+print(set4) ##{33, 78, 55} --return common items
+
+
+set2.intersection_update(set1)
+print(set2)
+
+set5 = set1.difference(set2)
+print(set5) ##{96, 14,79} --uncommon item 
+
+set2.difference_update(set1)
+print(set2) ## {2, 22, 88, 47} 
+
+
+set1.difference_update(set2)
+print(set1) ##{96, 33, 55, 14, 78,79}
+
+
+set1={14,55,78,96,33,79}
+set2={47,55,33,78,22,2,88}
+
+seta=set2.symmetric_difference(set1)
+print(set1) ##{96, 33, 55, 14, 78,  79}
+
+q1=set1.issubset(set2)
+print(q1) ## false
+
+q2=set1.issuperset(set2)
+print(q2) ## false
+
+a=set1.isdisjoint(set2)
+print(a) 
+
+
+setB1 = {66,77,88}
+setB2 = {55,68,77}
+
+setB1.intersection(setB2)
+setB1.intersection_update(setB2)
+print(setB1)
 
 
 
 
-del setB
+
+
+
+
+
+
+
+
+
 
 
 
