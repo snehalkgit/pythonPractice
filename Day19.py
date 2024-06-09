@@ -106,12 +106,6 @@ a=set1.isdisjoint(set2)
 print(a) 
 
 
-setB1 = {66,77,88}
-setB2 = {55,68,77}
-
-setB1.intersection(setB2)
-setB1.intersection_update(setB2)
-print(setB1)
 
 
 
